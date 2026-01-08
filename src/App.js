@@ -120,11 +120,12 @@ function App() {
     });
   };
 
+  // --- Solutions List (Updated Description) ---
   const solutions = [
     { name: "PHYSIOT Manager", icon: <FaUserMd />, desc: "Complete Management System Software" },
     { name: "Workshop Pro", icon: <FaWrench />, desc: "Workshop Management System" },
     { name: "Ozon Detailing", icon: <FaCar />, desc: "Welcome to OZON Detailing & Car Wash" },
-    { name: "Clinic Management", icon: <FaClinicMedical />, desc: "Complete Clinic & Pharmacy System" },
+    { name: "Clinic Management", icon: <FaClinicMedical />, desc: "Complete Clinic, Pharmacy & Lab System" },
     { name: "Stone Exterio", icon: <FaStore />, desc: "Timeless stone solutions for elegant and durable exteriors." },
   ];
 
@@ -175,7 +176,7 @@ function App() {
         <div className="container nav-container">
           <div className="logo">
             <a href="#home">
-              <img src={logoUrl} alt="SuhaimSoft" className="logo-img" onError={(e)=>{e.target.onerror=null; e.target.src="https://via.placeholder.com/150x50?text=SuhaimSoft"}} />
+              <img src={logoUrl} alt="SuhaimSoft" className="logo-img" onError={(e)=>{e.target.style.display = 'none'; e.target.parentNode.innerHTML = '<h2>Suhaim<span class="color-text">Soft</span></h2>';}} />
             </a>
           </div>
           <div className={`nav-links ${mobileMenuOpen ? 'active' : ''}`}>
@@ -335,24 +336,36 @@ function App() {
             <p>Explore our recent successful projects</p>
           </div>
           <div className="work-grid">
+            
             <div className="work-card">
               <div className="work-icon blue"><FaClinicMedical /></div>
               <h3>Suhaim Soft EMR</h3>
               <p>SUHAIM SOFT delivers smart, secure, and efficient Electronic Medical Records (EMR) to empower healthcare professionals.</p>
               <a href="https://clinicppm.site/" target="_blank" rel="noreferrer" className="work-link">Visit ClinicPPM <FaExternalLinkAlt/></a>
             </div>
+
             <div className="work-card">
               <div className="work-icon orange"><FaStore /></div>
               <h3>Stone Exterio</h3>
               <p>Timeless stone solutions for elegant and durable exteriors. We build beautiful e-commerce experiences.</p>
               <a href="https://stonexterio.in/" target="_blank" rel="noreferrer" className="work-link">Visit StoneExterio <FaExternalLinkAlt/></a>
             </div>
+
+            {/* Added PHYSIOT Manager in Our Work */}
+            <div className="work-card">
+              <div className="work-icon purple"><FaUserMd /></div>
+              <h3>PHYSIOT Manager</h3>
+              <p>Comprehensive physiotherapy clinic management software for patient tracking and billing.</p>
+              <a href="https://physio-app-iota.vercel.app/" target="_blank" rel="noreferrer" className="work-link">Visit Physio App <FaExternalLinkAlt/></a>
+            </div>
+
             <div className="work-card">
               <div className="work-icon red"><FaCar /></div>
               <h3>OZON Detailing</h3>
               <p>The ultimate destination for vehicle care. We bring your car back to its showroom glory.</p>
               <a href="https://ozondetailing.in/" target="_blank" rel="noreferrer" className="work-link">Visit Ozon <FaExternalLinkAlt/></a>
             </div>
+
             <div className="work-card">
               <div className="work-icon green"><FaClinicMedical /></div>
               <h3>Daya Homeopathy</h3>
