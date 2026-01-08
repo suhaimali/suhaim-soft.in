@@ -46,7 +46,7 @@ function App() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const dropdownRef = useRef(null);
-  
+
   const [formData, setFormData] = useState({
     name: '',
     serviceType: 'App Development',
@@ -175,7 +175,7 @@ function App() {
         <div className="container nav-container">
           <div className="logo">
             <a href="#home">
-              <img src={logoUrl} alt="SuhaimSoft" className="logo-img" onError={(e)=>{e.target.style.display = 'none'; e.target.parentNode.innerHTML = '<h2>Suhaim<span class="color-text">Soft</span></h2>';}} />
+              <img src={logoUrl} alt="SuhaimSoft" className="logo-img" onError={(e)=>{e.target.onerror=null; e.target.src="https://via.placeholder.com/150x50?text=SuhaimSoft"}} />
             </a>
           </div>
           <div className={`nav-links ${mobileMenuOpen ? 'active' : ''}`}>
@@ -186,7 +186,6 @@ function App() {
             <a href="#work" onClick={closeMenu}>Our Work</a>
             <a href="#developers" onClick={closeMenu}>Developers</a>
             <a href="#contact" onClick={closeMenu}>Contact Us</a>
-            
             <div className="nav-social-icons">
               <a href="tel:+918891479505" title="Call Us"><FaPhoneAlt /></a>
               <a href="https://wa.me/918891479505" target="_blank" rel="noreferrer"><FaWhatsapp /></a>
